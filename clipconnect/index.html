@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clip Connect Pro | Secure Clipboard Syncing (2025)</title>
+  <meta name="description" content="Clip Connect Pro lets you sync clipboard content securely between devices using end-to-end encryption." />
+
+  <!-- OG Tags -->
+  <meta property="og:title" content="Clip Connect Pro – Secure Clipboard Syncing" />
+  <meta property="og:description" content="Share and sync clipboard text across devices in real time with AES-256 encryption. Get it now from the Amazon Appstore." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Clip+Connect+Pro" />
+  <meta property="og:url" content="https://yourdomain.com" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clip Connect Pro – Secure Clipboard Syncing" />
+  <meta name="twitter:description" content="End-to-end encrypted clipboard syncing across devices. Available on Amazon Appstore." />
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Clip+Connect+Pro" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #3730a3;
+  --text: #f9fafb;
+  --bg: #0f172a;
+  --bg-alt: #1e293b;
+  --accent: #38bdf8;
+  --radius: 1rem;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+  border-radius: var(--radius);
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--accent);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: var(--bg-alt);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: var(--accent);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+}
+
+.download .btn {
+  font-size: 1.1rem;
+}
+
+.app-badge {
+  margin-top: 1rem;
+  height: 50px;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--bg-alt);
+  margin-top: 4rem;
+  border-top: 1px solid #334155;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+footer .social-links a {
+  color: var(--text);
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+footer .social-links a:hover {
+  color: var(--accent);
+}
+
+/* Dark Mode Toggle (Optional if adding system-based mode) */
+body.dark-mode {
+  --bg: #0f172a;
+  --bg-alt: #1e293b;
+  --text: #f9fafb;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: var(--radius);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+    /* ... Keep your CSS as-is from previous code (unchanged) ... */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+  <a href="#" class="logo">
+    <img 
+      src="https://i.ibb.co/TX6HsD7/clipconnlogo.png" 
+      alt="Clip Connect Logo" 
+      onerror="this.onerror=null; this.src='https://placehold.co/40x40/1e293b/fff?text=CCP&font=montserrat';" 
+      height="40" 
+      style="border-radius: 1rem;" 
+    />
+    Clip Connect Pro
+  </a>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#download">Download</a>
+    <button class="theme-toggle" id="themeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+  <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+</header>
+
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Secure Clipboard Syncing Made Simple</h1>
+        <p>Share clipboard content across devices in real time with end-to-end encryption. Perfect for developers, designers, and teams.</p>
+        <div class="btn-group">
+          <a href="#download" class="btn"><i class="fas fa-download"></i> Download Now</a>
+          <a href="#how-it-works" class="btn btn-outline"><i class="fas fa-play-circle"></i> How It Works</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img 
+  src="app-screenshot.png" 
+  alt="Clip Connect Pro App Screenshot" 
+  onerror="this.onerror=null; this.src='https://placehold.co/300x600/eeeeee/38bdf8?text=App+Screenshot&font=montserrat';" 
+/>
+
+      </div>
+    </section>
+  </div>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-link"></i></div>
+          <h3>Session-Based Syncing</h3>
+          <p>Start a secure session with a pairing code and sync clipboard content instantly between devices.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-lock"></i></div>
+          <h3>End-to-End Encryption</h3>
+          <p>All data is encrypted with AES-256, with a unique key per session for maximum security.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>Real-Time Polling</h3>
+          <p>Automatically fetches the latest clipboard data every few seconds to keep you in sync.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-ad"></i></div>
+          <h3>Rewarded Ads</h3>
+          <p>Get 3 free syncs per session, then watch a quick ad to earn 5 more syncs instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Clipboard Integration</h3>
+          <p>Easily fetch your current clipboard and sync it in one tap (Android only).</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-history"></i></div>
+          <h3>Persistent Sessions</h3>
+          <p>Session state is saved locally so you can reopen the app without losing connection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div>
+            <h3>Start or Join a Session</h3>
+            <p>As a Host, create a session and share the code. As a Joiner, enter the code to connect.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Sync Your Clipboard</h3>
+            <p>Hosts can push clipboard content, while Joiners automatically receive updates.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Work Seamlessly</h3>
+            <p>Copy text on one device and it appears on all connected devices instantly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- In the download section -->
+<section id="download" class="download">
+  <div class="container">
+    <h2 class="section-title">Get Clip Connect Pro</h2>
+    <p>Direct download of the latest version (v1.0.0)</p>
+    <div class="btn-group">
+      <!-- Updated download button with direct APK link -->
+      <a href="https://yourdomain.com/downloads/clipconnect-pro-v1.0.0.apk" class="btn" download="ClipConnect-Pro.apk">
+        <i class="fas fa-download"></i> Download APK (25MB)
+      </a>
+      <a href="#how-it-works" class="btn btn-outline">
+        <i class="fas fa-info-circle"></i> Installation Guide
+      </a>
+    </div>
+    <div style="margin-top: 1.5rem; background: var(--bg-alt); padding: 1rem; border-radius: var(--radius);">
+      <h4 style="margin-bottom: 0.5rem; color: var(--accent);">Installation Instructions:</h4>
+      <ol style="text-align: left; padding-left: 1.5rem; margin: 0 auto; max-width: 500px;">
+        <li>Download the APK file</li>
+        <li>Open the downloaded file</li>
+        <li>Allow "Install unknown apps" or scan app if prompted</li>
+        <li>Follow the installation steps</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://tiktok.com/@OlaCodez" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://github.com/OlaCodez1" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.youtube.com/@OlaCodez" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>© 2025 Clip Connect Pro. All rights reserved.</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem;">
+      Made with <i class="fas fa-heart" style="color: var(--primary);"></i> by <a href="mailto:contact@olacodez.dev" style="color: var(--primary); text-decoration: none;">OlaCodez</a>
+    </p>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('nav');
+    navToggle.addEventListener('click', () => nav.classList.toggle('active'));
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => nav.classList.remove('active'));
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Dark mode toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      themeIcon.classList.toggle('fa-sun');
+      themeIcon.classList.toggle('fa-moon');
+    });
+  </script>
+</body>
+</html>
