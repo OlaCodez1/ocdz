@@ -22,6 +22,7 @@ const upload = multer({
   limits: { fileSize: 100 * 1024 * 1024 }, // 100MB
 });
 
+// Upload endpoint
 app.post('/upload', upload.single('file'), (req, res) => {
   const file = req.file;
 
@@ -42,8 +43,24 @@ app.post('/upload', upload.single('file'), (req, res) => {
   });
 });
 
+// Download endpoint
+app.get('/download', (req, res) => {
+  const filePath = path.join(uploadDir, 'app-release.apk');
+
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).send('APK file not found');
+  }
+
+  res.setHeader('Content-disposition', 'attachment; filename=app-release.apk');
+  res.setHeader('Content-type', 'application/vnd.android.package-archive');
+
+  const fileStream = fs.createReadStream(filePath);
+  fileStream.pipe(res);
+});
+
+// Root route
 app.get('/', (req, res) => {
-  res.send('✅ Upload server is running.');
+  res.send('✅ Upload server is running. <a href="/download">Download APK</a>');
 });
 
 app.listen(PORT, () => {
